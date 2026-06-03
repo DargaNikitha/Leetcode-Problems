@@ -1,0 +1,16 @@
+class Solution(object):
+    def jump(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ce=0
+        f=0
+        j=0
+        n=len(nums)
+        for i in range(n-1):
+            f=max(f,i+nums[i])
+            if i==ce:
+                j+=1
+                ce=f
+        return j      
